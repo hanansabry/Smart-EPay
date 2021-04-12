@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/categories_imgae"
+            android:scaleType="fitXY"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#10000000">
+        </View>
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:background="@null"
+            android:src="@drawable/ic_back_black"
+            android:tint="@color/colorPrimary"/>
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-40dp"
+        android:layout_weight="6.3"
+        android:background="@drawable/bg_topleft_topright_cornered">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Add new category"
+                android:textColor="@color/colorPrimary"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextBrandName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/corner_light_gray"
+                android:gravity="bottom"
+                android:hint="Brand Name"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextDesc"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/corner_light_gray"
+                android:gravity="bottom"
+                android:hint="Description"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/imageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/corner_light_gray"
+                android:drawableEnd="@drawable/ic_photo_camera"
+                android:editable="false"
+                android:focusedByDefault="true"
+                android:hint="Upload photo"
+                android:padding="16dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnAddCategory"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/cornered_accent_bg_fill"
+                android:text="Add"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

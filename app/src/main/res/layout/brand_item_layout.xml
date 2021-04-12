@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/brandsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="32dp"
+        android:weightSum="3">
+
+    <ImageView
+        android:id="@+id/brandImageView"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="100dp"
+        android:src="@drawable/brands_icon"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/brandNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brands"
+            android:fontFamily="@font/allerta"
+            android:textColor="@color/colorPrimary"
+            android:textSize="32sp"/>
+
+        <TextView
+            android:id="@+id/brandDescTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add new brand"
+            android:fontFamily="@font/allerta"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/colorTransBg" />
+</LinearLayout>

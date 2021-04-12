@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".guest.CartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:src="@drawable/ic_back_black"
+                android:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/shopNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/allerta"
+                android:text="Shopping Cart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order details:"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="32dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="10dp"
+            app:cardMaxElevation="2dp"
+            app:cardBackgroundColor="@color/transparent_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order Id:"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/orderIdTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimary"
+                        android:text="546846546545we"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Date:"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/dateTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:text="25*1*2021"
+                        android:background="@color/transparent_gray"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Market Name:"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/marketNameTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp"
+                        android:text="Brand Name"
+                        android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Price:"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/totalPriceTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp"
+                        android:text="1250 LE"
+                        android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cart Items:"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="32dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="5.2"
+            tools:listitem="@layout/item_cart_checkout" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFinish"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:background="@color/colorAccent"
+        android:text="Finish"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

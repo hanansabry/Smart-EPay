@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_gray"
+    android:orientation="vertical"
+    tools:context=".guest.QRCodeGenertorActivity">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:background="@null"
+        android:src="@drawable/ic_back_black"
+        android:tint="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/qrCodeImageView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:src="@drawable/qr_code_png24"/>
+
+    <TextView
+        android:id="@+id/scanCodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/allerta"
+        android:text="Scan this QR code to pay the invoice"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+
+
+</LinearLayout>
