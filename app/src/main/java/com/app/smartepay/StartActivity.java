@@ -7,9 +7,12 @@ import butterknife.OnClick;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.app.smartepay.guest.MainGuestActivity;
-import com.app.smartepay.shop.ShopLoginActivity;
-import com.app.smartepay.shop.ShopRegisterActivity;
+import com.app.smartepay.presentation.guest.MainGuestActivity;
+import com.app.smartepay.presentation.shop.MainShopActivity;
+import com.app.smartepay.presentation.shop.ShopLoginActivity;
+import com.app.smartepay.presentation.shop.ShopRegisterActivity;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class StartActivity extends AppCompatActivity {
 
@@ -32,7 +35,11 @@ public class StartActivity extends AppCompatActivity {
 
     @OnClick(R.id.btnShop)
     public void onShopClicked() {
-        startActivity(new Intent(this, ShopLoginActivity.class));
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            startActivity(new Intent(this, ShopLoginActivity.class));
+        } else {
+            startActivity(new Intent(this, MainShopActivity.class));
+        }
     }
 
     @OnClick(R.id.btnRegister)

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".shop.ItemsActivity">
+    tools:context=".presentation.shop.ItemsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -112,6 +112,7 @@
             android:layout_marginEnd="32dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -121,6 +122,7 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addItemFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/transparent_gray"
     android:orientation="vertical"
-    tools:context=".guest.QRCodeGenertorActivity">
+    tools:context=".presentation.guest.QRCodeGenertorActivity">
 
     <ImageButton
         android:id="@+id/btnBack"

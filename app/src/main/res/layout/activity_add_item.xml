@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/categories_imgae"
+            android:src="@drawable/brands_image"
             android:scaleType="fitXY"/>
 
         <View
@@ -52,13 +52,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Add new category"
+                android:text="Add new item"
                 android:textColor="@color/colorPrimary"
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextCategoryName"
+                android:id="@+id/editTextItemName"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="24dp"
@@ -66,7 +66,7 @@
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/corner_light_gray"
                 android:gravity="bottom"
-                android:hint="Category Name"
+                android:hint="Item Name"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/text_gray"
@@ -87,6 +87,21 @@
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/corner_light_gray"
+                android:gravity="bottom"
+                android:hint="Price"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <EditText
                 android:id="@+id/imageEditText"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -101,7 +116,7 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/btnAddCategory"
+                android:id="@+id/btnAddItem"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

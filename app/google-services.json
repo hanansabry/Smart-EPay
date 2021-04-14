@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "511375794718",
+    "firebase_url": "https://smart-e-pay-default-rtdb.firebaseio.com",
+    "project_id": "smart-e-pay",
+    "storage_bucket": "smart-e-pay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511375794718:android:b148a01fda2b41607c440f",
+        "android_client_info": {
+          "package_name": "com.app.smartepay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511375794718-nnb3bmrd6g35v8u4ftbqil7dia8drunk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4FxgnmQ_Ws2ahhan7r07IeYqRqdEX7Gk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511375794718-nnb3bmrd6g35v8u4ftbqil7dia8drunk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

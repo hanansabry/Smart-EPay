@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppWithTransparentStatusBar">
-        <activity android:name=".guest.QRCodeGenertorActivity"></activity>
-        <activity android:name=".guest.CartActivity" />
-        <activity android:name=".guest.MarketItemsActivity" />
-        <activity android:name=".shop.ItemsActivity" />
-        <activity android:name=".shop.CategoriesActivity" />
-        <activity android:name=".shop.BrandsActivity" />
-        <activity android:name=".shop.MainShopActivity" />
-        <activity android:name=".shop.ShopRegisterActivity" />
-        <activity android:name=".shop.ShopLoginActivity" />
-        <activity android:name=".guest.MainGuestActivity" />
+        <activity android:name=".presentation.shop.AddItemActivity"></activity>
+        <activity android:name=".presentation.guest.QRCodeGenertorActivity" />
+        <activity android:name=".presentation.guest.CartActivity" />
+        <activity android:name=".presentation.guest.MarketItemsActivity" />
+        <activity android:name=".presentation.shop.ItemsActivity" />
+        <activity android:name=".presentation.shop.CategoriesActivity" />
+        <activity android:name=".presentation.shop.BrandsActivity" />
+        <activity android:name=".presentation.shop.MainShopActivity" />
+        <activity android:name=".presentation.shop.ShopRegisterActivity" />
+        <activity android:name=".presentation.shop.ShopLoginActivity" />
+        <activity android:name=".presentation.guest.MainGuestActivity" />
         <activity android:name=".StartActivity" />
         <activity
             android:name=".SplashActivity"
