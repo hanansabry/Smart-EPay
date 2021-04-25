@@ -80,4 +80,9 @@ public class BrandsActivity extends AppCompatActivity implements IPickResult {
             Toast.makeText(this, r.getError().getMessage(), Toast.LENGTH_LONG).show();
         }
     }
+
+    @OnClick(R.id.btnBack)
+    public void onBackClicked() {
+        onBackPressed();
+    }
 }

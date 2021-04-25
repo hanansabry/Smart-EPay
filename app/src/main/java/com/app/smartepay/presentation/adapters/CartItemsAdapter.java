@@ -29,7 +29,6 @@ public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsAdapter.Cart
 
     private List<Item> itemList;
     private Context context;
-    private int count;
     private CartCallback cartCallback;
 
     public CartItemsAdapter(Context context, List<Item> itemList, CartCallback cartCallback) {
@@ -55,18 +54,21 @@ public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsAdapter.Cart
                 .load(item.getImageUrl())
                 .placeholder(R.drawable.welcome1)
                 .into(holder.itemImageView);
-        count = Integer.parseInt(holder.cartItemCountTextView.getText().toString());
+
         holder.increaseCartItemButton.setOnClickListener(v -> {
+            int count = Integer.parseInt(holder.cartItemCountTextView.getText().toString());
             holder.cartItemCountTextView.setText(++count + "");
         });
 
         holder.decreaseCartItemButton.setOnClickListener(v -> {
+            int count = Integer.parseInt(holder.cartItemCountTextView.getText().toString());
             if (count > 1) {
                 holder.cartItemCountTextView.setText(--count + "");
             }
         });
 
         holder.mAddToCartButton.setOnClickListener(v -> {
+            int count = Integer.parseInt(holder.cartItemCountTextView.getText().toString());
             cartCallback.onAddToCartClicked(item, count);
         });
     }

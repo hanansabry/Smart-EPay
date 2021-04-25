@@ -7,11 +7,12 @@
     android:orientation="vertical"
     tools:context=".presentation.shop.MainShopActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="horizontal">
 
         <ImageButton
@@ -21,7 +22,9 @@
             android:layout_gravity="center"
             android:background="@null"
             android:src="@drawable/ic_back_black"
-            android:tint="@color/colorPrimary" />
+            android:tint="@color/colorPrimary"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
 
         <TextView
             android:id="@+id/shopNameTextView"
@@ -32,9 +35,20 @@
             android:fontFamily="@font/allerta"
             android:text="Shop Name"
             android:textColor="@color/colorPrimary"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/btnBack"
+            android:layout_centerVertical="true"/>
 
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_signout"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/brandsView"

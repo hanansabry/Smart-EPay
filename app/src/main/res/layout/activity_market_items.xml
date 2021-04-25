@@ -14,10 +14,11 @@
         android:layout_weight="9.2"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="50dp"
             android:orientation="horizontal">
 
@@ -28,10 +29,12 @@
                 android:layout_gravity="center"
                 android:background="@null"
                 android:src="@drawable/ic_back_black"
-                android:tint="@color/colorPrimary" />
+                android:tint="@color/colorPrimary"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
 
             <TextView
-                android:id="@+id/shopNameTextView"
+                android:id="@+id/brandNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -39,9 +42,34 @@
                 android:fontFamily="@font/allerta"
                 android:text="Shop Name"
                 android:textColor="@color/colorPrimary"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/btnBack"
+                android:layout_centerVertical="true"/>
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/cartItemsNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/allerta"
+                android:text="0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/cartImageView"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageView
+                android:id="@+id/cartImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cart"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/itemsRecyclerView"

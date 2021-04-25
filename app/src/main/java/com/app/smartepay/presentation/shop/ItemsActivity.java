@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.app.smartepay.Constants;
 import com.app.smartepay.R;
@@ -125,10 +126,14 @@ public class ItemsActivity extends AppCompatActivity {
 
     @OnClick(R.id.addItemFab)
     public void onAddItemFabClicked() {
-        Intent intent = new Intent(this, AddItemActivity.class);
-        intent.putExtra(Constants.BRAND, selectedBrand.getId());
-        intent.putExtra(Constants.CATEGORY, selectedCategory.getName());
-        startActivity(intent);
+        if (selectedBrand != null && selectedCategory != null ) {
+            Intent intent = new Intent(this, AddItemActivity.class);
+            intent.putExtra(Constants.BRAND, selectedBrand.getId());
+            intent.putExtra(Constants.CATEGORY, selectedCategory.getName());
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "You must select brand and category to add new item", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @OnClick(R.id.btnBack)

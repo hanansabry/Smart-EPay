@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.smartepay.R;
+import com.app.smartepay.StartActivity;
 import com.app.smartepay.model.Shop;
 import com.app.smartepay.viewmodels.GetShopViewModel;
 import com.google.firebase.auth.FirebaseAuth;
@@ -59,5 +60,18 @@ public class MainShopActivity extends AppCompatActivity {
     @OnClick(R.id.itemsView)
     public void onItemsClicked() {
         startActivity(new Intent(this, ItemsActivity.class));
+    }
+
+    @OnClick(R.id.btnBack)
+    public void onBackClicked() {
+        onBackPressed();;
+    }
+
+    @OnClick(R.id.btnLogout)
+    public void onLogoutClicked() {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(this, StartActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

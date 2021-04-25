@@ -28,6 +28,7 @@ public class ItemsRepositoryImpl implements ItemsRepository {
 
     public ItemsRepositoryImpl() {
         mDatabase = FirebaseDatabase.getInstance();
+        uId = FirebaseAuth.getInstance().getCurrentUser() != null? FirebaseAuth.getInstance().getCurrentUser().getUid() : null;
     }
 
     @Override
